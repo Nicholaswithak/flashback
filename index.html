@@ -19,8 +19,9 @@
       };
 
 
-      var App = function() {
-        return (
+      class App extends React.Component {
+        render() {
+          return (
           <div className='App'>
             <h1 className='title'>
               Flashback
@@ -32,8 +33,9 @@
               {Card(cardData)}
             </div>
           </div>
-        );
-      };
+          );
+        }
+      }
 
       var Card = function(props) {
         return (
@@ -50,7 +52,7 @@
         );
       };
 
-      ReactDOM.render(App(), document.getElementById('app'));
+      ReactDOM.render(<App />, document.getElementById('app'));
     </script>
   </body>
 </html>
